@@ -26,3 +26,7 @@ common character.
 then we know that longest common subsequence of our strings is the same as the
 longest common subsequence of strings which at least one character from our
 original string removed.
+
+We can visualize our algorithm as following:
+
+![Recursive algorithm](assets/generated/recursive.svg "Recursive implementation of our algorithm")
