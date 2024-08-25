@@ -1,0 +1,25 @@
+@startuml
+start
+
+:Pick two indicies from strings;
+
+if (Are the characters the same) then (yes)
+   :Check without the characters;
+   :return 1 + result;
+   stop
+else (no)
+   fork
+     :Check with character from
+     first string removed;
+   fork again
+     :Check with character from
+     second string removed;
+   fork again
+     :Check with characters
+     from both strings removed;
+   endmerge
+   :return maximum of three results;
+   stop
+endif
+
+@enduml

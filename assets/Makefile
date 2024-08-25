@@ -1,6 +1,6 @@
 PLANTUML ?= plantuml
 OUTPUT_FOLDER := generated
-DIAGRAMS :=
+DIAGRAMS := recursive
 
 .PHONY: all clean
 
