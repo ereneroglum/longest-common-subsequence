@@ -51,3 +51,8 @@ fn longest_common_subsequence(str1: &str, str2: &str) -> u64 {
     }
 }
 ```
+
+You will quickly see that the algorithm is inefficient. It does the same
+calculations many times. By using dynamic programming we can optimize our
+algorithm. Essentially we will sacrefise the space complexity to gain time
+complexity.
