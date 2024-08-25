@@ -30,3 +30,24 @@ original string removed.
 We can visualize our algorithm as following:
 
 ![Recursive algorithm](assets/generated/recursive.svg "Recursive implementation of our algorithm")
+
+We can implement this algorithm in rust as following:
+
+```rust
+fn longest_common_subsequence(str1: &str, str2: &str) -> u64 {
+    if str1.is_empty() || str2.is_empty() {
+        return 0;
+    } else if str1.chars().next().unwrap() == str2.chars().next().unwrap() {
+        return 1 + longest_common_subsequence(&str1[1..], &str2[1..]);
+    } else {
+        return *[
+            longest_common_subsequence(&str1[1..], &str2),
+            longest_common_subsequence(&str1, &str2[1..]),
+            longest_common_subsequence(&str1[1..], &str2[1..]),
+        ]
+        .iter()
+        .max()
+        .unwrap();
+    }
+}
+```
