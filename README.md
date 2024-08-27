@@ -23,9 +23,9 @@ least 1.  It may be more, so we have to check the rest of the string without
 common character.
 
 3. Consider at any point we found that two characters are not the same.
-Then we know that the longest common subsequence of our strings is the same as the
-longest common subsequence of strings that contains at least one character from our
-original string removed.
+Then we know that the longest common subsequence of our strings is the same as
+the longest common subsequence of strings that contains at least one character
+from our original string removed.
 
 We can visualize our algorithm as follows:
 
@@ -54,5 +54,5 @@ fn longest_common_subsequence(str1: &str, str2: &str) -> u64 {
 
 You will quickly see that the algorithm is inefficient. It does the same
 calculations many times. By using dynamic programming, we can optimize our
-algorithm. Essentially, we will sacrifice the space complexity to gain time.
+algorithm. Essentially, we will sacrifice the space complexity to gain time
 complexity.
